@@ -7,7 +7,7 @@ const fakeApiCall = (): Promise<string[]> =>
 
 export const AsyncList = () => {
   const [foodData, setFoodData] = useState<string[]>([]);
-
+    
   useEffect(() => {
     fakeApiCall().then((result: string[]) => setFoodData(result));
   }, []);
